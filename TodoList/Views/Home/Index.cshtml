@@ -3,14 +3,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo list</title>
-    <link href="StyleSheet.css" rel="stylesheet" />
+    <link href="StyleIndex.css" rel="stylesheet" />
 </head>
 <body>
-    <ul>
+<h1>Todo</h1>
+<div class="listItems">
+    <ol>
         @foreach (var item in Model)
         {
             <li>
-                @Html.ActionLink(item.ItemName + " " + item.ItemDetails,"Details", new { id = item.ItemId })
+                @Html.ActionLink(item.ItemName + " | " + item.ItemDetails, "Details", new {id = item.ItemId})
                 @if (!item.IsItemComplete)
                 {
                     <span>❌</span>
@@ -21,9 +23,9 @@
                 }
             </li>
         }
-    </ul>
-
-<div>
+    </ol>
+</div>
+<div class="addItemButton">
     @Html.ActionLink("Add item", "AddItem")
 </div>
 </body>

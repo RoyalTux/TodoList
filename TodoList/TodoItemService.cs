@@ -8,25 +8,33 @@ namespace TodoList
         {
             _todoItems.Add(++_lastId, new TodoItem
             {
-                ItemName = "Open Visual Studio",
+                ItemName = "Choose technology and programming language",
                 IsItemComplete = true,
-                ItemDetails = "Open VS programm",
+                ItemDetails = "Find the documentation and all the necessary materials",
                 ItemId = _lastId
 
             });
             _todoItems.Add(++_lastId, new TodoItem
             {
-                ItemName = "Code in Visual Studio",
-                IsItemComplete = true,
-                ItemDetails = "Code in VS programm",
+                ItemName = "Learn Asp.Net Core",
+                IsItemComplete = false,
+                ItemDetails = "Learn theory and practice new things",
                 ItemId = _lastId
 
             });
             _todoItems.Add(++_lastId, new TodoItem
             {
-                ItemName = "Close Visual Studio",
-                IsItemComplete = true,
-                ItemDetails = "Close VS programm",
+                ItemName = "Raise the level of knowledge in English",
+                IsItemComplete = false,
+                ItemDetails = "Read English literature and communicate with native speakers",
+                ItemId = _lastId
+
+            });
+            _todoItems.Add(++_lastId, new TodoItem
+            {
+                ItemName = "Prepare for an interview",
+                IsItemComplete = false,
+                ItemDetails = "Repeat all the material",
                 ItemId = _lastId
 
             });

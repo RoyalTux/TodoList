@@ -1,0 +1,58 @@
+﻿body{
+    background: ivory;
+}
+h1 {
+    text-align: center;
+    color: darkcyan;
+}
+.addItemButton{
+    position: relative;
+    left: 55px;
+}
+.addItemButton a {
+    text-decoration: none;
+    border: 1px solid #333;
+    display: inline-block;
+    padding: 5px 15px;
+    color: cadetblue;
+    background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
+    font-size: 20pt;
+}
+.addItemButton a:hover {
+        box-shadow: 0 0 5px rgba(0,0,0,0.3);
+        background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
+        color: darkcyan;
+    }
+/**/
+.listItems a{
+    text-decoration: none;
+    padding: 5px 15px;
+    font-size: 20pt;
+    color:black;
+}
+.listItems a:hover{
+    color: blue;
+}
+ol{
+    color:darkgreen;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+.listItems li {
+    text-align: left;
+    padding: 5px 1px;
+}
+
+
+
+
+/*input{
+    display: block;
+    margin: 5px auto;
+    padding: 5px;
+    font-size: 20px;
+}
+h1{
+    margin: 20px auto;
+}*/
