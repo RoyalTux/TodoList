@@ -1,7 +1,23 @@
 ﻿.cancelButton{
     text-align: center; 
 }
-.cancelButton a{
+.cancelButton a {
+    font-weight: bold;
+    text-decoration: none;
+    border: 1px solid #333;
+    display: inline-block;
+    padding: 5px 15px;
+    color: darkgoldenrod;
+    background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
+    font-size: 20pt;
+    width: 168px;
+}
+.cancelButton a:hover {
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
+    color:goldenrod;
+}
+.deleteButton {
     text-decoration: none;
     border: 1px solid #333;
     display: inline-block;
@@ -9,21 +25,15 @@
     color: brown;
     background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
     font-size: 20pt;
-    width: 175pt;
+    width: 200px;
 }
-.cancelButton a:hover {
+.deleteButton:hover {
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
     color: crimson;
-    }
-.addForm input{
-    display: block;
-    margin: 5px auto;
-    padding: 5px;
-    font-size: 20px;
-    text-align: center;
 }
-.addButton{
+.completeButton {
+    text-align: center;
     font-weight: bold;
     text-decoration: none;
     border: 1px solid #333;
@@ -32,11 +42,24 @@
     color: darkgreen;
     background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
     font-size: 20pt;
-    width: 200pt;
+    width: 200px;
 }
-.addButton:hover{
+.completeButton:hover{
     box-shadow: 0 0 5px rgba(0,0,0,0.3);
     background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
     color: forestgreen;
+}
+.operationButtons{
+    text-align: center;
+}
+strong {
+    color: blue;
+    font-size: 20pt;
+    padding: 5px 15px;
+}
+span {
+    font-size: 20pt;
+    color: black;
+    font-weight: bold;
 }
 

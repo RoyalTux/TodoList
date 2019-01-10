@@ -3,37 +3,42 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo details</title>
-    <link href="StyleIndex.css" rel="stylesheet" />
+    <link href="/StyleSheet.css" rel="stylesheet" />
+    <link href="/StyleDetails.css" rel="stylesheet" />
 </head>
 <body>
-    <div><span>Item name:</span><span>@Model?.ItemName</span></div>
-    <div><span>Item details:</span><span>@Model?.ItemDetails</span></div>
-    <div>
-        <span>Item complete state:</span>
-        @if (!Model.IsItemComplete)
-        {
-            <span>❌</span>
-        }
-        else
-        {
-            <span>✔️</span>
-        }
-    </div>
-    @using (Html.BeginForm("DeleteItem", "Home", FormMethod.Post))
+<h1>Todo details</h1>
+<div><strong>Item name: </strong><span>@Model?.ItemName</span></div>
+<div><strong>Item details: </strong><span>@Model?.ItemDetails</span></div>
+<div>
+    <strong>Item complete state: </strong>
+    @if (!Model.IsItemComplete)
     {
-        <input name="id" value="@Model.ItemId" type="hidden" />
-        <input type="submit" value="Delete Item" />
+        <span>❌</span>
     }
+    else
+    {
+        <span>✔️</span>
+    }
+</div>
+<div class="operationButtons">
     @using (Html.BeginForm("CompleteItem", "Home", FormMethod.Post))
     {
         <input name="id" value="@Model.ItemId" type="hidden" />
 
         @if (!Model.IsItemComplete)
-        {
-            <input type="submit" value="Complete" />
-        }
-        
+         {
+             <input type="submit" value="Complete" class="completeButton" />
+         }
     }
-    @Html.ActionLink("Cancel", "Index", "Home")
+    @using (Html.BeginForm("DeleteItem", "Home", FormMethod.Post))
+    {
+        <input name="id" value="@Model.ItemId" type="hidden"/>
+        <input type="submit" value="Delete Item" class="deleteButton"/>
+    }
+</div>
+    <div class="cancelButton">
+        @Html.ActionLink("Cancel", "Index", "Home")
+    </div>
 </body>
 </html>

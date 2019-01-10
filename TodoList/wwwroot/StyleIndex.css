@@ -1,13 +1,5 @@
-﻿body{
-    background: ivory;
-}
-h1 {
+﻿.addItemButton{
     text-align: center;
-    color: darkcyan;
-}
-.addItemButton{
-    position: relative;
-    left: 55px;
 }
 .addItemButton a {
     text-decoration: none;
@@ -19,11 +11,10 @@ h1 {
     font-size: 20pt;
 }
 .addItemButton a:hover {
-        box-shadow: 0 0 5px rgba(0,0,0,0.3);
-        background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
-        color: darkcyan;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    background: linear-gradient(to bottom, #fcfff4, #e9e9ce);
+    color: darkcyan;
     }
-/**/
 .listItems a{
     text-decoration: none;
     padding: 5px 15px;
@@ -37,7 +28,6 @@ ol{
     color:darkgreen;
     font-size: 20px;
     font-weight: bold;
-    font-style: italic;
 }
 .listItems li {
     text-align: left;
@@ -47,12 +37,4 @@ ol{
 
 
 
-/*input{
-    display: block;
-    margin: 5px auto;
-    padding: 5px;
-    font-size: 20px;
-}
-h1{
-    margin: 20px auto;
-}*/
+
