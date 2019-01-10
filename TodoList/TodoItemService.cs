@@ -39,8 +39,8 @@ namespace TodoList
 
             });
         }
-        private static readonly Dictionary<long, TodoItem> _todoItems
-            = new Dictionary<long, TodoItem>();
+        private static readonly SortedDictionary<long, TodoItem> _todoItems
+            = new SortedDictionary<long, TodoItem>();
         private static long _lastId = 0;
         public IEnumerable<TodoItem> GetAll() => _todoItems.Values;
         public TodoItem GetOne(long id) => _todoItems[id];
