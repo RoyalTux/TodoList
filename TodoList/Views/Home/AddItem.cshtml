@@ -1,4 +1,4 @@
-﻿@model TodoList.TodoItem
+﻿@model TodoList.Entities.TodoItem
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Add item form</title>
@@ -15,9 +15,10 @@
         @Html.TextBoxFor(m => m.ItemDetails, new { placeholder = "Details" })
         <input type="submit" value="Save" class="addButton"/>
         <div class="cancelButton">
-        @Html.ActionLink("Cancel", "Index", "Home")
+            @Html.ActionLink("Cancel", "Index", "Home")
         </div>
     }
 </div>
+
 </body>
 </html>

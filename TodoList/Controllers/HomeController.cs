@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using TodoList.Entities;
+using TodoList.Services;
 
-namespace TodoList
+namespace TodoList.Controllers
 {
     public class HomeController : Controller
     {
@@ -38,8 +40,7 @@ namespace TodoList
         /// <summary>
         /// Action, which adds an item to the list.
         /// </summary>
-        /// <param name="itemName"></param>
-        /// <param name="itemDesc"></param>
+        /// <param name="todoItem"></param>
         /// <returns></returns>
         [HttpPost]
         public IActionResult AddItem(TodoItem todoItem)
@@ -48,6 +49,7 @@ namespace TodoList
             service.Add(todoItem);
             return RedirectToAction("Index");
         }
+
         /// <summary>
         /// Action, which deletes an item from the list.
         /// </summary>
@@ -60,6 +62,7 @@ namespace TodoList
             service.Remove(id);
             return RedirectToAction("Index");
         }
+
         /// <summary>
         /// Action, which marks an item as complete.
         /// </summary>

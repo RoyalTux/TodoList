@@ -1,5 +1,5 @@
 ﻿@using TodoList
-@model TodoItem
+@model TodoList.Entities.TodoItem
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo details</title>
@@ -12,6 +12,10 @@
 <div><strong>Item details: </strong><span>@Model?.ItemDetails</span></div>
 <div>
     <strong>Item complete state: </strong>
+
+    @{
+        System.Diagnostics.Debug.Assert(Model != null, nameof(Model) + " != null");
+    }
     @if (!Model.IsItemComplete)
     {
         <span>❌</span>

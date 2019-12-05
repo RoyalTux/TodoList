@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
+using TodoList.Entities;
 
-namespace TodoList
+namespace TodoList.Services
 {
     public class TodoItemService
     {
         static TodoItemService()
         {
-            _todoItems.Add(++_lastId, new TodoItem
+            TodoItems.Add(++_lastId, new TodoItem
             {
                 ItemName = "Choose technology and programming language",
                 IsItemComplete = true,
@@ -14,7 +15,8 @@ namespace TodoList
                 ItemId = _lastId
 
             });
-            _todoItems.Add(++_lastId, new TodoItem
+
+            TodoItems.Add(++_lastId, new TodoItem
             {
                 ItemName = "Learn Asp.Net Core",
                 IsItemComplete = false,
@@ -22,7 +24,8 @@ namespace TodoList
                 ItemId = _lastId
 
             });
-            _todoItems.Add(++_lastId, new TodoItem
+
+            TodoItems.Add(++_lastId, new TodoItem
             {
                 ItemName = "Raise the level of knowledge in English",
                 IsItemComplete = false,
@@ -30,7 +33,8 @@ namespace TodoList
                 ItemId = _lastId
 
             });
-            _todoItems.Add(++_lastId, new TodoItem
+
+            TodoItems.Add(++_lastId, new TodoItem
             {
                 ItemName = "Prepare for an interview",
                 IsItemComplete = false,
@@ -39,20 +43,27 @@ namespace TodoList
 
             });
         }
-        private static readonly SortedDictionary<long, TodoItem> _todoItems
+
+        private static readonly SortedDictionary<long, TodoItem> TodoItems
             = new SortedDictionary<long, TodoItem>();
+
         private static long _lastId = 0;
-        public IEnumerable<TodoItem> GetAll() => _todoItems.Values;
-        public TodoItem GetOne(long id) => _todoItems[id];
+
+        public IEnumerable<TodoItem> GetAll() => TodoItems.Values;
+
+        public TodoItem GetOne(long id) => TodoItems[id];
+
         public void Add(TodoItem todoItem)
         {
             todoItem.ItemId = ++_lastId;
-            _todoItems.Add(todoItem.ItemId, todoItem);
+            TodoItems.Add(todoItem.ItemId, todoItem);
         }
-        public void Remove(long id) => _todoItems.Remove(id);
+
+        public void Remove(long id) => TodoItems.Remove(id);
+
         public void Complete(long id)
         {
-            _todoItems[id].IsItemComplete = true;
+            TodoItems[id].IsItemComplete = true;
         }
     }
 }

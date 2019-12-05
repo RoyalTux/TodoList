@@ -1,5 +1,4 @@
-﻿@using TodoList
-@model IEnumerable<TodoItem>
+﻿@model IEnumerable<TodoList.Entities.TodoItem>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Todo list</title>
@@ -7,6 +6,7 @@
     <link href="StyleIndex.css" rel="stylesheet" />
 </head>
 <body>
+
 <h1>Todo</h1>
 <div class="listItems">
     <ol>
@@ -29,5 +29,6 @@
 <div class="addItemButton">
     @Html.ActionLink("Add item", "AddItem")
 </div>
+
 </body>
 </html>
